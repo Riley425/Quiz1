@@ -1,0 +1,44 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Login Page -->
+        <div id="login-page" class="page">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <button onclick="login()">Login</button>
+        </div>
+        
+        <!-- Home Page -->
+        <div id="home-page" class="page" style="display: none;">
+            <h2>Welcome, <span id="user-name"></span>!</h2>
+            <button onclick="startQuiz('quiz1')">Start Quiz 1</button>
+            <button onclick="startQuiz('quiz2')">Start Quiz 2</button>
+        </div>
+        
+        <!-- Quiz Page -->
+        <div id="quiz-page" class="page" style="display: none;">
+            <h2 id="quiz-title"></h2>
+            <div id="timer" style="font-size: 18px; background: #4a90e2; color: #fff; padding: 10px; border-radius: 5px; display: inline-block; margin-bottom: 20px;">
+                5:00
+            </div>
+            <div id="questions-container"></div>
+            <button onclick="submitQuiz()">Submit Quiz</button>
+        </div>
+        
+        <!-- Results Page -->
+        <div id="results-page" class="page" style="display: none;">
+            <h2>Results</h2>
+            <p id="score"></p>
+            <button onclick="goHome()">Go Home</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
